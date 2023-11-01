@@ -1,0 +1,186 @@
+@font-face {
+    font-family: "dosisLight";
+    src: url(../fonts/Dosis/static/Dosis-ExtraLight.ttf);
+}
+
+@font-face {
+    font-family: "dosisMedium";
+    src: url(../fonts/Dosis/static/Dosis-Medium.ttf);
+}
+
+body {
+    background: rgb(238, 174, 202);
+    background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+
+}
+
+header a{
+    display: flex;
+    color: white;
+    text-shadow: 1px 1px 1px rgb(0, 0, 0);
+    font-size: 1.4em;
+    text-decoration: none;
+    font-family: "dosisLight";
+}
+
+header{
+    display: flex;
+    gap: 20px;
+    padding-top: 15px;
+    padding-left: 15px;
+}
+
+#top{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 80%;
+    align-items: center;
+}
+
+#top h1{
+    font-size: 2.5em;
+    color: rgba(152, 55, 243, 0.753);
+    margin-bottom: 10px;
+    font-family: "dosisMedium";
+}
+
+#top button{
+    color: rgb(133, 35, 224);
+    background-color: aliceblue;
+    border-radius: 5px;
+    padding: 8px;
+    border: none;
+    font-family: "dosisLight";
+    font-weight: 600;
+    margin-top: 12px;
+}
+
+#formAdd{
+    display: flex;
+    width: 100%;
+    padding: 15px;
+    font-family: "dosisLight";
+    color: black;
+    font-weight: 500;
+    justify-content: center;
+    height: 50px;
+    align-items: center;
+    padding-left: 0px;
+    visibility: hidden;
+}
+
+#titleAdd, #yearAdd, #realisatorAdd{
+    margin-left: 3px;
+    margin-right: 10px;
+}
+
+form label{
+    margin-left: 50px;
+}
+
+#titleAdd, #yearAdd, #realisatorAdd, form label{
+    margin-top: 8px;
+    margin-left: 3px;
+}
+
+input{
+    background-color: rgb(236, 208, 213);
+    border: none;
+    border-radius: 5px;
+}
+
+label{
+    margin-left: 0px;
+}
+
+.displayResult{
+    background-color: aliceblue;
+    color: rgb(133, 35, 224);
+    padding: 3px;
+    border-radius: 5px;    
+    text-align: center;
+    font-family: "dosisLight";
+    font-weight: 600;
+    margin-top: -45px;
+    margin-bottom: 15px;
+}
+
+.tableFull {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+main th{
+    font-family: "dosisMedium";
+    color: rgb(133, 35, 224);
+    font-size: 1.7em;
+    background-color: rgba(245, 225, 197, 0.527);
+    padding: 10px 10px;
+}
+
+
+table{
+    text-align: center;
+    border-collapse: collapse;
+    border-radius: 20px;
+    width: 80%;
+    margin-top: 5px;
+}
+
+main td{
+    padding: 20px 30px;
+}
+
+table tr{
+    color: rgb(133, 35, 224);
+    font-family: "dosisLight";
+    font-weight: 600;
+}
+
+main tr:nth-child(odd){
+    background-color: aliceblue;
+}
+
+main tr:nth-child(even){
+    background-color: #c0d3f0;
+}
+
+th:first-child {
+    border-top-left-radius: 1em;
+}
+
+th:last-child {
+    border-top-right-radius: 1em;
+}
+
+tr:last-child{
+    border-bottom-right-radius: 1em ;
+}
+
+#sortBtn{
+    color: rgb(133, 35, 224);
+    background-color: aliceblue;
+    border-radius: 5px;
+    padding: 8px;
+    border: none;
+    font-family: "dosisLight";
+    font-weight: 600;
+}
+
+.sort{
+    display: flex;
+    width: 150px;
+    margin-left: 12%;
+    
+}
+
+button:hover{ 
+    cursor:pointer;
+}
+
+select:hover{
+    cursor: pointer;
+}
