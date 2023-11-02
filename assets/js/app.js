@@ -2,26 +2,33 @@ var films = [
     {
         title: "Deadpool",
         years: 2016,
-        authors: "Tim Miller"
+        authors: "Tim Miller",
+        id: 0,
     },
     {
         title: "Spiderman",
         years: 2002,
-        authors: "Sam Raimi"
+        authors: "Sam Raimi",
+        id: 1,
     },
     {
         title: "Scream",
         years: 1996,
-        authors: "Wes Craven"
+        authors: "Wes Craven",
+        id: 2,
     },
     {
         title: "It: chapter 1",
         years: 2019,
-        authors: "Andy Muschietti"
+        authors: "Andy Muschietti",
+        id: 3,
     }
 ];
 
-// Displaying the differents movies into a table 
+let id_gen = 4;
+let popup = document.querySelector("#popup");
+
+// Displaying the movies into a table 
 
 let tableBody = document.querySelector("tbody");
 
@@ -49,6 +56,13 @@ function displayMovieTable() {
         let delBtn = document.createElement("button");
         newDel.appendChild(delBtn);
         delBtn.innerText = "Supprimer";
+        delBtn.classList.add("delButton");
+        delBtn.addEventListener("click", () => {
+           popup.style.display = "block";
+            popup.dataset.movie_id = info.id;
+        }
+
+        );
     }
 
 
@@ -60,12 +74,12 @@ let notif = document.querySelector(".displayResult");
 notif.style.display = "none";
 
 document.querySelector("#sortBtn").addEventListener("change", (event) => {
-    if(event.target.value === "year"){
+    if (event.target.value === "year") {
         films.sort(compareYear)
     } else films.sort(compareTitle);
 
     displayMovieTable();
-} )
+})
 
 // Buttons that displays the form to add a new movie
 
@@ -119,9 +133,11 @@ function saveNew(event) {
             title: titleAdd.value.charAt(0).toUpperCase() + titleAdd.value.slice(1),
             years: yearAdd.value,
             authors: realisatorAdd.value.charAt(0).toUpperCase() + realisatorAdd.value.slice(1),
+            id: id_gen,
         };
-        films.push(film);
 
+        films.push(film);
+        id_gen += 1;
         displayMovieTable();
 
     } else {
@@ -141,14 +157,39 @@ function saveNew(event) {
 }
 
 
-
-
 // filters
 
-function compareTitle(movieA, movieB){
+function compareTitle(movieA, movieB) {
     return movieA.title.localeCompare(movieB.title);
 }
 
-function compareYear(movieA, movieB){
+function compareYear(movieA, movieB) {
     return movieB.years - movieA.years;
 }
+
+
+//delete button
+let confirmDeleteBtn = document.querySelector("#confirmDel");
+let cancelDeleteBtn = document.querySelector("#cancelDel");
+
+
+function onCancelDelete() {
+    popup.style.display = "none";
+}
+
+function onConfirmDelete() {
+    deleteMovie(popup.dataset.movie_id);
+    displayMovieTable();
+    popup.style.display = "none";
+}
+
+confirmDeleteBtn.addEventListener("click", onConfirmDelete);
+cancelDeleteBtn.addEventListener("click", onCancelDelete);
+
+function deleteMovie(movieID) {
+
+    films = films.filter(film => film.id != movieID);
+
+}
+
+

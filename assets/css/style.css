@@ -14,6 +14,8 @@ body {
 
 }
 
+/* header */
+
 header a{
     display: flex;
     color: white;
@@ -30,6 +32,8 @@ header{
     padding-left: 15px;
 }
 
+/* Page 1 */
+
 #top{
     display: flex;
     flex-direction: column;
@@ -40,7 +44,8 @@ header{
 
 #top h1{
     font-size: 2.5em;
-    color: rgba(152, 55, 243, 0.753);
+    color: #6ba2f5;
+    text-shadow: 1px 1px 2px rgb(233, 13, 49);
     margin-bottom: 10px;
     font-family: "dosisMedium";
 }
@@ -92,6 +97,7 @@ input{
 
 label{
     margin-left: 0px;
+    color: white;
 }
 
 .displayResult{
@@ -115,7 +121,7 @@ label{
 
 main th{
     font-family: "dosisMedium";
-    color: rgb(133, 35, 224);
+    color: rgb(148, 66, 224);
     font-size: 1.7em;
     background-color: rgba(245, 225, 197, 0.527);
     padding: 10px 10px;
@@ -135,7 +141,7 @@ main td{
 }
 
 table tr{
-    color: rgb(133, 35, 224);
+    color: rgb(155, 84, 221);
     font-family: "dosisLight";
     font-weight: 600;
 }
@@ -183,4 +189,80 @@ button:hover{
 
 select:hover{
     cursor: pointer;
+}
+
+.delButton{
+    background-color: rgba(236, 155, 169, 0.966);
+    border: none;
+    border-radius: 3px;
+    color: rgb(133, 35, 224);
+    font-family: "dosisLight";
+    font-weight: 600;
+    padding: 5px;
+}
+
+#popup{
+    z-index: 1.5;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    text-align: center;
+    background-color: rgba(75, 69, 69, 0.932);
+    color: white;
+    padding: 25px;
+    margin-left: 40%;
+    border-radius: 50px;
+    display: none;
+}
+
+#popup button{
+    width: 75px;
+    margin: auto;
+    margin-bottom: 5px;
+    background-color: aliceblue;
+    color: rgb(133, 35, 224);
+    border: none;
+    border-radius: 10px;
+}
+
+/* Page 2  */
+
+#searchH1{
+    font-size: 2.5em;
+    color: #6ba2f5;
+    text-shadow: 1px 1px 2px rgb(233, 13, 49);
+    margin-bottom: 10px;
+    font-family: "dosisMedium";
+    text-align: center;
+}
+
+#searchBar{
+    display: flex;
+    width: 80%;
+    margin: auto;
+    justify-content: center;
+    padding: 20px;
+}
+
+#mediaBtn{
+    color: rgb(133, 35, 224);
+    background-color: aliceblue;
+    border-radius: 5px;
+    padding: 8px;
+    border: none;
+    font-family: "dosisLight";
+    font-weight: 600;
+}
+
+#searchBar label{
+    color: rgb(133, 35, 224);
+    font-family: "dosisLight";
+    font-weight: 600;
+    padding-top: 8px;
+}
+
+#searchBar input{
+    margin-left: 5px;
+    margin-right: 50px;
 }

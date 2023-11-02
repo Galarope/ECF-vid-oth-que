@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECF Vidéotèque</title>
+    <link rel="stylesheet" href="assets/css/normalize.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/app.js" defer></script>
+</head>
+
+<body>
+    
+    <header>
+        <a href="index.html">Accueil</a>
+        <a href="recherche.html">Recherche</a>
+    </header>
+
+    <h1 id="searchH1">Recherche</h1>
+
+    <section id="searchBar">
+
+        <label for="titleBar">Titre :</label>
+        <input type="text" id="titleBar">
+
+        <label for="yearBar">Année :</label>
+        <input type="number" id="yearBar">
+
+        <div class="mediaType">
+            <select id="mediaBtn">
+                <option value="movie">Film</option>
+                <option value="TvShow">Série</option>
+                <option value="episode">Episode</option>
+                <option value="aucun">Aucun</option>
+            </select>
+
+        </div>
+    </section>
+</body>
