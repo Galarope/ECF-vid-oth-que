@@ -117,6 +117,8 @@ label{
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    width: 90%;
+    margin: auto;
 }
 
 main th{
@@ -128,13 +130,13 @@ main th{
 }
 
 
-table{
+table {
     text-align: center;
     border-collapse: collapse;
     border-radius: 20px;
-    width: 80%;
+    width: 100%;
     margin-top: 5px;
-}
+    }
 
 main td{
     padding: 20px 30px;
@@ -245,7 +247,7 @@ select:hover{
     padding: 20px;
 }
 
-#mediaBtn{
+#select-search-type{
     color: rgb(133, 35, 224);
     background-color: aliceblue;
     border-radius: 5px;
@@ -255,14 +257,181 @@ select:hover{
     font-weight: 600;
 }
 
-#searchBar label{
-    color: rgb(133, 35, 224);
-    font-family: "dosisLight";
-    font-weight: 600;
-    padding-top: 8px;
-}
 
 #searchBar input{
     margin-left: 5px;
     margin-right: 50px;
+    color: rgb(133, 35, 224); 
+    font-family: "dosisLight";
+    font-weight: 600;
 }
+
+table img {
+    height: 150px;
+    border-radius: 3px;
+    border: 2px solid pink;
+}
+
+#btn-movie-search {
+    color: rgb(133, 35, 224);
+    background-color: aliceblue;
+    border-radius: 5px;
+    padding: 8px;
+    border: none;
+    font-family: "dosisLight";
+    font-weight: 600;
+    margin-left: 15px;
+}
+
+#tableDisp{
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    width: 90%;
+    margin-top: 50px;
+}
+
+#table-search-results{
+    width: 90%;
+    margin: auto;
+}
+
+#pagination button{
+    display: none;
+    width: 100px;
+    color: rgb(133, 35, 224);
+    background-color: aliceblue;
+    border-radius: 5px;
+    padding: 8px;
+    border: none;
+    font-family: "dosisLight";
+    font-weight: 600;
+}
+
+#pagination{
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    margin-bottom: 30px;
+    gap: 10px;
+}
+
+@media all and (max-width: 1000px){
+    main{
+        width: 800px;
+        margin: auto;
+    }
+
+    #top{
+        width: 800px;
+        margin: auto;
+    }
+}
+
+
+
+
+
+@media all and (max-width: 768px){
+    main{
+        width: 650px;
+        margin: auto;
+    }
+
+    #top{
+        width: 650px;
+        margin: auto;
+    }
+
+    header{
+        text-align: center;
+    }
+}
+
+@media all and (max-width: 650px){
+    main{
+        width: 400px;
+        margin: auto;
+    }
+
+    #top{
+        width: 400px;
+        margin: auto;
+    }
+
+    #tableFull{
+        width: 380px;
+        margin: auto;
+    }
+    
+    #searchBar{
+        width: 400px;
+    }
+}
+
+@media all and (max-width: 570px){
+    main{
+        width: 300px;
+        margin: 5px 5px;
+        
+    }
+
+    #searchBar{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #searchBar input{
+        margin-right: 10px;
+    }
+
+    #formAdd{
+        flex-direction: column;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    #tableFull{
+        width: 380px;
+        margin: auto;
+    }
+}
+
+@media all and (max-width: 440px){
+
+    main{
+        margin: 5px 5px;
+    }
+
+    h1{
+        text-align: center;
+    }
+
+    #searchBar{
+        width: 250px;
+    }
+
+    #searchBar input{
+        margin-right: 10px;
+    }
+
+    #formAdd{
+        flex-direction: column;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    #tableFull{
+        /* width: 100%; */
+        margin: auto;
+    }
+
+    html{
+        margin-left: 0px
+    }
+}
+
+
