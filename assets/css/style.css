@@ -316,6 +316,22 @@ table img {
     gap: 10px;
 }
 
+span {
+    color: rgb(133, 35, 224); 
+    font-family: "dosisLight";
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+}
+
+span.typed-cursor{
+    display: none;
+}
+
+span.typed-cursor--blink{
+    display: none;
+}
+
 @media all and (max-width: 1000px){
     main{
         width: 800px;

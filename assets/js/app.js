@@ -6,7 +6,7 @@ var films = [
         id: 0,
     },
     {
-        title: "Spiderman",
+        title : "Spiderman",
         years: 2002,
         authors: "Sam Raimi",
         id: 1,

@@ -1,3 +1,12 @@
+    let typed = new Typed("#change", {
+		strings: ["un film...", "une série...", "un épisode...."],
+		typeSpeed: 50,
+		backSpeed: 80,
+		loop: true,
+	});
+
+
+
 const inputSearchTitle = document.querySelector("#input-search-title")
 const selectSearchType = document.querySelector("#select-search-type")
 const searchButton = document.querySelector("#btn-movie-search")
@@ -66,9 +75,9 @@ function displaySearchResult(movies) {
 
 searchButton.addEventListener("click", () => {
 
-    tableSearchResults.style.display = "none"
-    pLoading.style.display = "block"
-
+    tableSearchResults.style.display = "none";
+    pLoading.style.display = "block";
+    document.querySelector("#change").style.display = "none";
     currentPage = 1
 
      title = inputSearchTitle.value
